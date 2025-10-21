@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saravana Kumar · Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0; 
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      color: #f3f3f3;
+      /* Animated gradient background */
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #30336b, #130f40, #be2edd, #00b894);
+      background-size: 400% 400%;
+      animation: gradientBG 16s ease infinite;
+      transition: background 0.5s;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto 40px auto;
+      padding: 36px 32px 36px 32px;
+      background: rgba(24, 25, 35, 0.93);
+      border-radius: 22px;
+      box-shadow: 0 4px 32px #2d113055;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 38px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .avatar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 5px solid #88f2fa;
+      box-shadow: 0 0 28px #00b89480;
+      margin-bottom: 10px;
+      background: #140e36;
+    }
+    .about h1 {
+      margin-bottom: 4px;
+      color: #00b894;
+      font-size: 2.2em;
+      letter-spacing: 1.5px;
+    }
+    .about p {
+      font-size: 1.12em;
+      margin-top: 0;
+      margin-bottom: 18px;
+      opacity: 0.91;
+      line-height: 1.6;
+    }
+    .social-icons {
+      margin-top: 8px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 13px;
+      background: #242b38;
+      color: #be2edd;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 1.55em;
+      transition: background 0.18s, color 0.18s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      background: #be2edd;
+      color: #fff;
+    }
+    .section-title {
+      color: #00b894;
+      font-size: 1.38em;
+      font-weight: bold;
+      margin: 38px 0 18px 0;
+      letter-spacing: 1.1px;
+      text-shadow: 0 1px 8px #2225;
+    }
+    .skills, .projects {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .card {
+      background: rgba(33, 33, 46, 0.98);
+      border-radius: 15px;
+      min-width: 250px;
+      flex: 1 1 240px;
+      margin-bottom: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 3px 13px #3a005030;
+      transition: transform 0.17s;
+    }
+    .card:hover {
+      transform: translateY(-4px) scale(1.035);
+      box-shadow: 0 7px 22px #00b89433;
+    }
+    .card h3 {
+      color: #be2edd;
+      font-size: 1.08em;
+      margin: 0 0 8px 0;
+    }
+    .card p {
+      margin: 0;
+      font-size: 1em;
+      opacity: 0.95;
+    }
+    .fake-button {
+      background-color: #be2edd;
+      color: white;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      user-select: none;
+      pointer-events: none;
+      font-size: 1em;
+      letter-spacing: 0.9px;
+      box-shadow: 0 2px 10px #be2edd30;
+    }
+    form {
+      max-width: 360px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    input, textarea {
+      border-radius: 10px;
+      border: none;
+      padding: 13px 20px;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 19px;
+      background: #24324a;
+      color: #f3f3f3;
+    }
+    form button {
+      background: linear-gradient(90deg,#00b894 40%,#be2edd 100%);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 13px 20px;
+      border: none;
+      transition: background 0.22s;
+      width: 100%;
+      font-size: 1em;
+      box-shadow: 0 2px 10px #00b89430;
+    }
+    form button:hover {
+      background:linear-gradient(90deg,#be2edd 30%,#00b894 99%);
+    }
+    footer {
+      text-align: center;
+      color: #cbeef2;
+      margin-top: 52px;
+      font-size: 1em;
+      text-shadow: 0 1px 4px #190f2090;
+    }
+    @media (max-width: 780px) {
+      .container { padding:18px 5vw 18px 5vw; }
+      header { flex-direction: column; gap:16px; }
+      .skills, .projects { flex-direction: column; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar-container">
+        <img src="D:\saravana\saravana1.jpg" alt="Saravana Kumar" />
+      </div>
+      <div class="about">
+        <h1>Saravana Kumar</h1>
+        <p>
+          Computer Science & Engineering Enthusiast<br>
+          Frontend & Backend Developer<br>
+          Passionate about Problem Solving, Data Analytics, and Modern Web Technologies.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/Witty_sarrior_016" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/7397631719" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/saravana-kumar-2b6b26327" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/saravana3217" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:saravana8774@example.com" title="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="section-title">My Expertise</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <p>I specialize in creating responsive and visually appealing websites using HTML and CSS. My focus is on building clean, user-friendly web interfaces that are both functional and aesthetically pleasing.</p>
+      </div>
+      <div class="card">
+        <h3>Backend Development</h3>
+        <p>Backend skills include Node.js, Python, and Express. I am comfortable developing APIs and scalable backend logic for modern web applications.</p>
+      </div>
+      <div class="card">
+        <h3>Others</h3>
+        <p>Problem Solving, Communication, Teamwork</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Data Analytics Project</h3>
+        <p>This project focuses on analyzing large datasets to extract meaningful insights. By leveraging data processing and visualization techniques, I help uncover trends and patterns that drive informed decision-making.</p>
+      </div>
+      <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>A portfolio tailored to showcase my skills and experience in data analytics and web development, demonstrating completed projects that highlight both analytical and web design expertise.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Let's Work Together</h2>
+    <form id="contactForm">
+      <div class="fake-button">Your Name</div>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <div class="fake-button">Email</div>
+      <input type="email" id="email" placeholder="Email" required />
+      <div class="fake-button">Your Message</div>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message via WhatsApp</button>
+    </form>
+    <footer>
+      &copy; 2025 Saravana Kumar. All rights reserved.
+    </footer>
+  </div>
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const message = encodeURIComponent(document.getElementById('message').value);
+      const whatsappNumber = '917397631719';
+      const text = `Hello!%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+      const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
